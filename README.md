@@ -2,7 +2,7 @@
 
 效果截图：
 
-    ![301664737018_ pic](https://user-images.githubusercontent.com/33112372/193471271-d707397f-abc4-497d-bc3f-924afbc9243b.jpg)
+![301664737018_ pic](https://user-images.githubusercontent.com/33112372/193471271-d707397f-abc4-497d-bc3f-924afbc9243b.jpg)
 
 
 为啥要写这玩意儿：
