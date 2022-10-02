@@ -28,7 +28,7 @@ end
 */
 func main() {
 
-	cfg, _ := ini.Load("config.ini.bac")
+	cfg, _ := ini.Load("config.ini")
 	allOption := new(AllOption)
 	_ = cfg.MapTo(allOption)
 
