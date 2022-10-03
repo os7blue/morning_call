@@ -26,6 +26,7 @@ step:
 6,push result to template message
 end
 */
+
 func main() {
 
 	cfg, _ := ini.Load("config.ini")
@@ -258,7 +259,7 @@ type AllResult struct {
 	CountDowns   []string
 }
 
-// all option struct
+// AllOption struct
 type AllOption struct {
 	Weather  Weather
 	Wechat   Wechat
@@ -270,13 +271,13 @@ type Hitokoto struct {
 	Types []string `ini:"types"`
 }
 
-// weather api option
+// Weather api option
 type Weather struct {
 	Key    string   `ini:"key"`
 	Region []string `ini:"region"`
 }
 
-// wechat api option
+// Wechat api option
 type Wechat struct {
 	AppId      string   `ini:"app-id"`
 	AppSecret  string   `ini:"app-secret"`
@@ -284,7 +285,7 @@ type Wechat struct {
 	User       []string `ini:"user"`
 }
 
-// day option
+// Day option
 type Day struct {
 	CountDown      []string `ini:"count-down"`
 	CountDownTitle []string `ini:"count-down-title"`

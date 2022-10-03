@@ -1,4 +1,4 @@
-module notice
+module morning_call
 
 go 1.19
 
@@ -9,7 +9,6 @@ require (
 )
 
 require (
-	github.com/Lofanmi/chinese-calendar-golang v0.0.0-20211214151323-ef5cb443e55e // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
 )
