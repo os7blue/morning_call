@@ -127,4 +127,8 @@
 
     3、我一个nil都没处理，你打我啊。
 
-    
+
+开源类库使用：
+
+ - 日期处理使用了carbon [https://github.com/golang-module/carbon](https://github.com/golang-module/carbon)
+ - json处理使用了gjson [https://github.com/tidwall/gjson](https://github.com/tidwall/gjson)
