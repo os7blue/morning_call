@@ -136,7 +136,7 @@ func randomHashColor() string {
 
 	for i := 0; i < 6; i++ {
 		rand.Seed(time.Now().UnixNano())
-		randNum := rand.Intn(15)
+		randNum := rand.Intn(16)
 		hash += codeArr[randNum]
 	}
 
