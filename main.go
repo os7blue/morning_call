@@ -3,15 +3,16 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/golang-module/carbon/v2"
-	"github.com/tidwall/gjson"
-	"gopkg.in/ini.v1"
 	"io"
 	"math/rand"
 	"net/http"
 	"net/url"
 	"strings"
 	"time"
+
+	"github.com/golang-module/carbon/v2"
+	"github.com/tidwall/gjson"
+	"gopkg.in/ini.v1"
 )
 
 /*
@@ -62,7 +63,12 @@ func sendTempMessage(allOption *AllOption, allResult *AllResult) {
 		"value": fmt.Sprintf("%s(%s)", gjson.Get(allResult.Hitokoto, "hitokoto"), gjson.Get(allResult.Hitokoto, "from")),
 		"color": randomHashColor(),
 	}
-	now := carbon.Now(carbon.Shanghai)
+
+	lang := carbon.NewLanguage()
+	lang.SetLocale("zh-CN")
+
+	c := carbon.SetLanguage(lang)
+	now := c.Now(carbon.Shanghai)
 	dataMap["now"] = map[string]string{
 		"value": fmt.Sprintf("%s %s", now.ToDateString(carbon.Shanghai), now.ToWeekString(carbon.Shanghai)),
 		"color": randomHashColor(),
@@ -196,10 +202,9 @@ func getHitokotoInfo(allOption *AllOption) string {
 		}
 		parseUrl.RawQuery = params.Encode()
 		hitokotoUrl = parseUrl.String()
-		fmt.Printf(hitokotoUrl + "----==")
 	}
 
-	hitokotoResultStr := SendSimplePost(hitokotoUrl, "")
+	hitokotoResultStr := SendSimpleGet(hitokotoUrl)
 	return hitokotoResultStr
 }
 
