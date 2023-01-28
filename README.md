@@ -55,7 +55,7 @@
     types= a,b,c,d,e,f,g,h,i,k,l
     
     [Day]
-    #距离多少天，格式mm-dd，可数组，以,分割。
+    #距离多少天，格式yyyy-mm-dd，可数组，以,分割。
     count-down=
     #对应距离多少天的的title，顺序对应count-down，可数组，完全描述 （你的描述）x天 如 "距离宝贝的生日还有"
     count-down-title =
