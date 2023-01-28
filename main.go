@@ -175,7 +175,7 @@ func getCountDownInfos(allOption *AllOption) []string {
 	for i := 0; i < len(allOption.Day.CountDown); i++ {
 		dc := allOption.Day.CountDown[i]
 		dcc := cb.Parse(fmt.Sprintf("%s", dc), carbon.Shanghai)
-		if dcc.IsPast() {
+		if dcc.Yesterday().IsPast() {
 			dcc = dcc.SetYear(today.Year() + 1)
 		}
 
